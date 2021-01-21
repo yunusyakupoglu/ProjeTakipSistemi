@@ -13,10 +13,11 @@ namespace ProjeTakipSistemi
 {
     public partial class List : Form
     {
+        Label kullanicid1 = new Label();
         public List()
         {
             InitializeComponent();
-            SqlConnection con = new SqlConnection("Data Source=DESKTOP-OM6H7IM; Initial Catalog=ProjeTakipSistemi;User Id=yunus;password=1234;");
+            SqlConnection con = new SqlConnection("Data Source=.;Initial Catalog=ProjeTakipSistemi;Integrated Security=true");
             SqlCommand cmd;
             SqlDataReader dr;
             cmd = new SqlCommand("SELECT * FROM tblPersonel", con);
@@ -35,14 +36,28 @@ namespace ProjeTakipSistemi
                 {
                     panel1.BackgroundImage = Properties.Resources._2;
                     label13.Text = "Ü Y E";
+                    
+                    kullanicid1.Name = "labellllll";
+                    kullanicid1.Text = "labellllll";
+
+                    Point labelKonum = new Point(407, 60);
+                    kullanicid1.Location = labelKonum;
+                    kullanicid1.TextChanged += kullanicid1_TextChanged;
+                    this.Controls.Add(kullanicid1);
                 }
             }
             con.Close();
             con.Dispose();
         }
 
-        SqlConnection con = new SqlConnection("Data Source=DESKTOP-OM6H7IM; Initial Catalog=ProjeTakipSistemi;User Id=yunus;password=1234;");
-        SqlCommand cmd;
+        private void kullanicid1_TextChanged(object sender, EventArgs e)
+        {
+            DataView dv = dt.DefaultView;
+            dv.RowFilter = "CONVERT(personelID, 'System.String')LIKE '" + kullanicid1.Text + "%'";
+            dataGridView1.DataSource = dv;
+        }
+
+        SqlConnection con = new SqlConnection("Data Source=.;Initial Catalog=ProjeTakipSistemi;Integrated Security=true");
         SqlDataReader dr;
 
         private void button3_Click(object sender, EventArgs e)
@@ -53,11 +68,13 @@ namespace ProjeTakipSistemi
             admin.Show();
         }
 
+        DataTable dt;
         private void uyeList_Load(object sender, EventArgs e)
         {
             con.Open();
+
             SqlDataAdapter adp = new SqlDataAdapter("select * from tblProjeGiris", con);
-            DataTable dt = new DataTable();
+            dt = new DataTable();
             adp.Fill(dt);
             dataGridView1.DataSource = dt;
 
@@ -68,6 +85,21 @@ namespace ProjeTakipSistemi
             this.dataGridView1.DefaultCellStyle.Font = new Font("Tahoma", 10);
 
             label1.Text = GirisPaneli.user;
+
+            SqlCommand command = new SqlCommand("SELECT id from tblPersonel where kullaniciAdi ='" + GirisPaneli.user + "'");
+
+            command.Connection = con;
+
+            dr = command.ExecuteReader();
+
+            while (dr.Read())
+            {
+                kullanicid.Text = dr["id"].ToString();
+                kullanicid1.Text = dr["id"].ToString();
+            }
+            dr.Close();
+            dr.Dispose();
+
         }
 
         private void uyeList_FormClosed(object sender, FormClosedEventArgs e)
@@ -451,5 +483,7 @@ namespace ProjeTakipSistemi
 
             proje.Show();
         }
+
+        
     }
 }

@@ -29,7 +29,7 @@ namespace ProjeTakipSistemi
         {
             user = txtUser.Text;
             pass = txtPass.Text;
-            con = new SqlConnection("Data Source=DESKTOP-OM6H7IM; Initial Catalog=ProjeTakipSistemi;User Id=yunus;password=1234;");
+            con = new SqlConnection("Data Source=.;Initial Catalog=ProjeTakipSistemi;Integrated Security=true");
             cmd = new SqlCommand("SELECT * FROM tblPersonel", con);
 
             con.Open();

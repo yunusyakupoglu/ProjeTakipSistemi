@@ -16,7 +16,7 @@ namespace ProjeTakipSistemi
         public İcerik()
         {
             InitializeComponent();
-            SqlConnection con = new SqlConnection("Data Source=DESKTOP-OM6H7IM; Initial Catalog=ProjeTakipSistemi;User Id=yunus;password=1234;");
+            SqlConnection con = new SqlConnection("Data Source=.;Initial Catalog=ProjeTakipSistemi;Integrated Security=true");
             SqlCommand cmd = new SqlCommand();
             cmd = new SqlCommand("SELECT * FROM tblPersonel", con);
             con.Open();
@@ -41,7 +41,7 @@ namespace ProjeTakipSistemi
             }
         }
 
-        SqlConnection con = new SqlConnection("Data Source=DESKTOP-OM6H7IM; Initial Catalog=ProjeTakipSistemi;User Id=yunus;password=1234;");
+        SqlConnection con = new SqlConnection("Data Source=.;Initial Catalog=ProjeTakipSistemi;Integrated Security=true");
         SqlCommand cmd = new SqlCommand();
         SqlDataReader dr;
         List list = new List();
@@ -583,6 +583,41 @@ namespace ProjeTakipSistemi
             {
                 MessageBox.Show("İşlem Sırasında Hata Oluştu." + hata.Message);
             }
+        }
+
+        private void dateTimePicker5_ValueChanged(object sender, EventArgs e)
+        {
+            dateTimePicker6_ValueChanged(textBox17.Text, e);
+        }
+
+        private void textBox17_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                int gun;  // gun ismindeki değişkenimiz
+                DateTime baslangic, bitis;  // başlangıç ve bitiş tarihleri datetime türünden
+                baslangic = DateTime.Parse(dateTimePicker5.Text);  // başlangıç tarihini TxtBaslangic'a atadık
+                gun = Int32.Parse(textBox17.Text);  // gun değişkenimizi de TxtGun'a atıyoruz, parse ediyoruz.
+                bitis = baslangic.AddDays(gun);  // bitis değişkenimizi gun değişkenimize atıyoruz, bunun için baslangic değişkenine gün ekleyip (adddays) bitiş vermesi gerek, onu da gun değişkeninden alıyor
+
+
+                dateTimePicker6.Text = bitis.ToLongDateString();  //TxtBitis'in text'ine de artık bitis degiskenimize atadık, ToLongDateString ile uzun tarih yazdırabiliriz.       
+            }
+
+            catch
+            {
+            }
+        }
+
+        private void dateTimePicker6_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void notlarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Notlarım notlarım = new Notlarım();
+            notlarım.Show();
         }
     }
 }

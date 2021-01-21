@@ -38,6 +38,7 @@ namespace ProjeTakipSistemi
             this.label13 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.kullanicid = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -103,7 +104,7 @@ namespace ProjeTakipSistemi
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(75, -6);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(150, 86);
+            this.panel1.Size = new System.Drawing.Size(230, 86);
             this.panel1.TabIndex = 212;
             // 
             // label13
@@ -112,7 +113,7 @@ namespace ProjeTakipSistemi
             this.label13.BackColor = System.Drawing.Color.Transparent;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 4.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label13.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label13.Location = new System.Drawing.Point(64, 57);
+            this.label13.Location = new System.Drawing.Point(75, 55);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(0, 12);
             this.label13.TabIndex = 208;
@@ -121,7 +122,7 @@ namespace ProjeTakipSistemi
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.Image = global::ProjeTakipSistemi.Properties.Resources.user;
-            this.pictureBox2.Location = new System.Drawing.Point(13, 20);
+            this.pictureBox2.Location = new System.Drawing.Point(24, 18);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(40, 50);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -134,17 +135,27 @@ namespace ProjeTakipSistemi
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label1.Location = new System.Drawing.Point(63, 32);
+            this.label1.Location = new System.Drawing.Point(74, 30);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(60, 24);
             this.label1.TabIndex = 207;
             this.label1.Text = "label1";
+            // 
+            // kullanicid
+            // 
+            this.kullanicid.AutoSize = true;
+            this.kullanicid.Location = new System.Drawing.Point(407, 29);
+            this.kullanicid.Name = "kullanicid";
+            this.kullanicid.Size = new System.Drawing.Size(66, 17);
+            this.kullanicid.TabIndex = 213;
+            this.kullanicid.Text = "kullanicid";
             // 
             // List
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1924, 1055);
+            this.Controls.Add(this.kullanicid);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
@@ -178,5 +189,6 @@ namespace ProjeTakipSistemi
         public System.Windows.Forms.PictureBox pictureBox2;
         public System.Windows.Forms.Label label1;
         public System.Windows.Forms.DataGridView dataGridView1;
+        public System.Windows.Forms.Label kullanicid;
     }
 }

@@ -58,11 +58,35 @@
     <Compile Include="ePosta.Designer.cs">
       <DependentUpon>ePosta.cs</DependentUpon>
     </Compile>
+    <Compile Include="kategoriEkle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="kategoriEkle.Designer.cs">
+      <DependentUpon>kategoriEkle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="kategoriSil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="kategoriSil.Designer.cs">
+      <DependentUpon>kategoriSil.cs</DependentUpon>
+    </Compile>
     <Compile Include="List.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="List.Designer.cs">
       <DependentUpon>List.cs</DependentUpon>
+    </Compile>
+    <Compile Include="notEkle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="notEkle.Designer.cs">
+      <DependentUpon>notEkle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Notlarım.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Notlarım.Designer.cs">
+      <DependentUpon>Notlarım.cs</DependentUpon>
     </Compile>
     <Compile Include="İcerik.cs">
       <SubType>Form</SubType>
@@ -90,8 +114,20 @@
     <EmbeddedResource Include="ePosta.resx">
       <DependentUpon>ePosta.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="kategoriEkle.resx">
+      <DependentUpon>kategoriEkle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="kategoriSil.resx">
+      <DependentUpon>kategoriSil.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="List.resx">
       <DependentUpon>List.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="notEkle.resx">
+      <DependentUpon>notEkle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Notlarım.resx">
+      <DependentUpon>Notlarım.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="İcerik.resx">
       <DependentUpon>İcerik.cs</DependentUpon>

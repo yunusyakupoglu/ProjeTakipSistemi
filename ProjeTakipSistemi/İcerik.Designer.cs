@@ -224,7 +224,6 @@ namespace ProjeTakipSistemi
             this.btnGuncelle = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.personelİşlemleriToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.takvimToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.notlarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.programHakkındaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label9 = new System.Windows.Forms.Label();
@@ -931,6 +930,7 @@ namespace ProjeTakipSistemi
             // 
             // button5
             // 
+            this.button5.Enabled = false;
             this.button5.Location = new System.Drawing.Point(1853, 183);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(150, 100);
@@ -1815,6 +1815,7 @@ namespace ProjeTakipSistemi
             this.dateTimePicker6.Name = "dateTimePicker6";
             this.dateTimePicker6.Size = new System.Drawing.Size(175, 22);
             this.dateTimePicker6.TabIndex = 179;
+            this.dateTimePicker6.ValueChanged += new System.EventHandler(this.dateTimePicker6_ValueChanged);
             // 
             // label29
             // 
@@ -1832,6 +1833,7 @@ namespace ProjeTakipSistemi
             this.textBox17.Name = "textBox17";
             this.textBox17.Size = new System.Drawing.Size(175, 22);
             this.textBox17.TabIndex = 177;
+            this.textBox17.TextChanged += new System.EventHandler(this.textBox17_TextChanged);
             // 
             // label28
             // 
@@ -1862,10 +1864,11 @@ namespace ProjeTakipSistemi
             // 
             // dateTimePicker5
             // 
-            this.dateTimePicker5.Location = new System.Drawing.Point(451, 338);
+            this.dateTimePicker5.Location = new System.Drawing.Point(451, 348);
             this.dateTimePicker5.Name = "dateTimePicker5";
             this.dateTimePicker5.Size = new System.Drawing.Size(175, 22);
             this.dateTimePicker5.TabIndex = 173;
+            this.dateTimePicker5.ValueChanged += new System.EventHandler(this.dateTimePicker5_ValueChanged);
             // 
             // label26
             // 
@@ -2073,39 +2076,33 @@ namespace ProjeTakipSistemi
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.personelİşlemleriToolStripMenuItem,
-            this.takvimToolStripMenuItem,
             this.notlarToolStripMenuItem,
             this.programHakkındaToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
-            this.menuStrip1.Size = new System.Drawing.Size(440, 30);
+            this.menuStrip1.Size = new System.Drawing.Size(371, 28);
             this.menuStrip1.TabIndex = 212;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // personelİşlemleriToolStripMenuItem
             // 
             this.personelİşlemleriToolStripMenuItem.Name = "personelİşlemleriToolStripMenuItem";
-            this.personelİşlemleriToolStripMenuItem.Size = new System.Drawing.Size(138, 26);
+            this.personelİşlemleriToolStripMenuItem.Size = new System.Drawing.Size(138, 24);
             this.personelİşlemleriToolStripMenuItem.Text = "Personel İşlemleri";
             this.personelİşlemleriToolStripMenuItem.Click += new System.EventHandler(this.personelİşlemleriToolStripMenuItem_Click);
-            // 
-            // takvimToolStripMenuItem
-            // 
-            this.takvimToolStripMenuItem.Name = "takvimToolStripMenuItem";
-            this.takvimToolStripMenuItem.Size = new System.Drawing.Size(68, 26);
-            this.takvimToolStripMenuItem.Text = "Takvim";
             // 
             // notlarToolStripMenuItem
             // 
             this.notlarToolStripMenuItem.Name = "notlarToolStripMenuItem";
-            this.notlarToolStripMenuItem.Size = new System.Drawing.Size(65, 26);
+            this.notlarToolStripMenuItem.Size = new System.Drawing.Size(65, 24);
             this.notlarToolStripMenuItem.Text = "Notlar";
+            this.notlarToolStripMenuItem.Click += new System.EventHandler(this.notlarToolStripMenuItem_Click);
             // 
             // programHakkındaToolStripMenuItem
             // 
             this.programHakkındaToolStripMenuItem.Name = "programHakkındaToolStripMenuItem";
-            this.programHakkındaToolStripMenuItem.Size = new System.Drawing.Size(155, 26);
+            this.programHakkındaToolStripMenuItem.Size = new System.Drawing.Size(155, 24);
             this.programHakkındaToolStripMenuItem.Text = "Program Hakkında...";
             this.programHakkındaToolStripMenuItem.Click += new System.EventHandler(this.programHakkındaToolStripMenuItem_Click);
             // 
@@ -2157,11 +2154,11 @@ namespace ProjeTakipSistemi
             // 
             this.label101.AutoSize = true;
             this.label101.BackColor = System.Drawing.Color.Transparent;
-            this.label101.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label101.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label101.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.label101.Location = new System.Drawing.Point(63, 38);
             this.label101.Name = "label101";
-            this.label101.Size = new System.Drawing.Size(80, 24);
+            this.label101.Size = new System.Drawing.Size(62, 17);
             this.label101.TabIndex = 207;
             this.label101.Text = "label101";
             // 
@@ -2479,7 +2476,6 @@ namespace ProjeTakipSistemi
         public System.Windows.Forms.Label label101;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem personelİşlemleriToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem takvimToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem notlarToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem programHakkındaToolStripMenuItem;
         public System.Windows.Forms.Label label9;

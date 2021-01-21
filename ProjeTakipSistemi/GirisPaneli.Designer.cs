@@ -41,7 +41,6 @@ namespace ProjeTakipSistemi
             this.SifreLabel = new System.Windows.Forms.Label();
             this.KullaniciAdiLabel = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -156,21 +155,11 @@ namespace ProjeTakipSistemi
             this.panel2.Size = new System.Drawing.Size(710, 110);
             this.panel2.TabIndex = 15;
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(0, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(46, 17);
-            this.label3.TabIndex = 16;
-            this.label3.Text = "label3";
-            // 
             // GirisPaneli
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(680, 365);
-            this.Controls.Add(this.label3);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.GirisButton);
@@ -203,6 +192,5 @@ namespace ProjeTakipSistemi
         private System.Windows.Forms.Panel panel2;
         public System.Windows.Forms.TextBox txtPass;
         public System.Windows.Forms.TextBox txtUser;
-        private System.Windows.Forms.Label label3;
     }
 }

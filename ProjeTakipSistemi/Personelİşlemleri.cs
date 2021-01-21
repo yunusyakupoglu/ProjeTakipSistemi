@@ -18,7 +18,7 @@ namespace ProjeTakipSistemi
         {
             InitializeComponent();
         }
-        SqlConnection con = new SqlConnection("Data Source=DESKTOP-OM6H7IM; Initial Catalog=ProjeTakipSistemi;User Id=yunus;password=1234;");
+        SqlConnection con = new SqlConnection("Data Source=.;Initial Catalog=ProjeTakipSistemi;Integrated Security=true");
         SqlCommand cmd;
         private void button1_Click(object sender, EventArgs e)
         {
