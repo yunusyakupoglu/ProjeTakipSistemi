@@ -29,6 +29,7 @@ namespace ProjeTakipSistemi
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ePosta));
             this.email = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
@@ -89,7 +90,7 @@ namespace ProjeTakipSistemi
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 25.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label3.Location = new System.Drawing.Point(43, 35);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(432, 52);
+            this.label3.Size = new System.Drawing.Size(420, 51);
             this.label3.TabIndex = 5;
             this.label3.Text = "ŞİFREMİ UNUTTUM";
             // 
@@ -104,8 +105,11 @@ namespace ProjeTakipSistemi
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.email);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ePosta";
-            this.Text = "ePosta";
+            this.ShowIcon = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Şifremi Unuttum";
             this.ResumeLayout(false);
             this.PerformLayout();
 

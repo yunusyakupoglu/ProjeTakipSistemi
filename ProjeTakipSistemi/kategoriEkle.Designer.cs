@@ -83,7 +83,8 @@ namespace ProjeTakipSistemi
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox1);
             this.Name = "kategoriEkle";
-            this.Text = "kategoriEkle";
+            this.ShowIcon = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.kategoriEkle_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -112,6 +112,7 @@ namespace ProjeTakipSistemi
             this.label4.Size = new System.Drawing.Size(46, 17);
             this.label4.TabIndex = 7;
             this.label4.Text = "label4";
+            this.label4.Visible = false;
             // 
             // button5
             // 
@@ -151,7 +152,8 @@ namespace ProjeTakipSistemi
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.comboBox1);
             this.Name = "notEkle";
-            this.Text = "notEkle";
+            this.ShowIcon = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.notEkle_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -43,6 +43,7 @@ namespace ProjeTakipSistemi
                     Point labelKonum = new Point(407, 60);
                     kullanicid1.Location = labelKonum;
                     kullanicid1.TextChanged += kullanicid1_TextChanged;
+                    kullanicid1.Visible = false;
                     this.Controls.Add(kullanicid1);
                 }
             }

@@ -227,10 +227,10 @@ namespace ProjeTakipSistemi
             this.notlarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.programHakkındaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label9 = new System.Windows.Forms.Label();
-            this.panel15 = new System.Windows.Forms.Panel();
-            this.label13 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label101 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.panel15 = new System.Windows.Forms.Panel();
             this.panel14.SuspendLayout();
             this.panel13.SuspendLayout();
             this.panel12.SuspendLayout();
@@ -246,8 +246,8 @@ namespace ProjeTakipSistemi
             this.panel5.SuspendLayout();
             this.panel4.SuspendLayout();
             this.menuStrip1.SuspendLayout();
-            this.panel15.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel15.SuspendLayout();
             this.SuspendLayout();
             // 
             // label100
@@ -937,6 +937,7 @@ namespace ProjeTakipSistemi
             this.button5.TabIndex = 197;
             this.button5.Text = "LİSTELE";
             this.button5.UseVisualStyleBackColor = true;
+            this.button5.Visible = false;
             // 
             // panel7
             // 
@@ -1422,6 +1423,14 @@ namespace ProjeTakipSistemi
             // comboBox4
             // 
             this.comboBox4.FormattingEnabled = true;
+            this.comboBox4.Items.AddRange(new object[] {
+            "Mimar",
+            "İnşaat Mühendisi",
+            "Makine Mühendisi",
+            "Elektrik Elektronik Mühendisi",
+            "İnşaat Teknikeri",
+            "Makine Teknikeri",
+            "Elektrik Teknikeri"});
             this.comboBox4.Location = new System.Drawing.Point(83, 129);
             this.comboBox4.Name = "comboBox4";
             this.comboBox4.Size = new System.Drawing.Size(147, 24);
@@ -1488,6 +1497,14 @@ namespace ProjeTakipSistemi
             // comboBox3
             // 
             this.comboBox3.FormattingEnabled = true;
+            this.comboBox3.Items.AddRange(new object[] {
+            "Mimar",
+            "İnşaat Mühendisi",
+            "Makine Mühendisi",
+            "Elektrik Elektronik Mühendisi",
+            "İnşaat Teknikeri",
+            "Makine Teknikeri",
+            "Elektrik Teknikeri"});
             this.comboBox3.Location = new System.Drawing.Point(83, 128);
             this.comboBox3.Name = "comboBox3";
             this.comboBox3.Size = new System.Drawing.Size(147, 24);
@@ -1564,6 +1581,14 @@ namespace ProjeTakipSistemi
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Mimar",
+            "İnşaat Mühendisi",
+            "Makine Mühendisi",
+            "Elektrik Elektronik Mühendisi",
+            "İnşaat Teknikeri",
+            "Makine Teknikeri",
+            "Elektrik Teknikeri"});
             this.comboBox1.Location = new System.Drawing.Point(83, 133);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(147, 24);
@@ -1599,7 +1624,9 @@ namespace ProjeTakipSistemi
             // 
             this.ihaleTuruCMB.FormattingEnabled = true;
             this.ihaleTuruCMB.Items.AddRange(new object[] {
-            "1"});
+            "Açık İhale",
+            "Doğrudan Temin",
+            "Pazarlık Usülü"});
             this.ihaleTuruCMB.Location = new System.Drawing.Point(117, 94);
             this.ihaleTuruCMB.Name = "ihaleTuruCMB";
             this.ihaleTuruCMB.Size = new System.Drawing.Size(166, 24);
@@ -1939,6 +1966,14 @@ namespace ProjeTakipSistemi
             // comboBox5
             // 
             this.comboBox5.FormattingEnabled = true;
+            this.comboBox5.Items.AddRange(new object[] {
+            "Mimar",
+            "İnşaat Mühendisi",
+            "Makine Mühendisi",
+            "Elektrik Elektronik Mühendisi",
+            "İnşaat Teknikeri",
+            "Makine Teknikeri",
+            "Elektrik Teknikeri"});
             this.comboBox5.Location = new System.Drawing.Point(83, 125);
             this.comboBox5.Name = "comboBox5";
             this.comboBox5.Size = new System.Drawing.Size(147, 24);
@@ -2116,28 +2151,17 @@ namespace ProjeTakipSistemi
             this.label9.Text = "label9";
             this.label9.Visible = false;
             // 
-            // panel15
+            // label101
             // 
-            this.panel15.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.panel15.BackgroundImage = global::ProjeTakipSistemi.Properties.Resources._2;
-            this.panel15.Controls.Add(this.label13);
-            this.panel15.Controls.Add(this.pictureBox1);
-            this.panel15.Controls.Add(this.label101);
-            this.panel15.Location = new System.Drawing.Point(1853, 319);
-            this.panel15.Name = "panel15";
-            this.panel15.Size = new System.Drawing.Size(150, 100);
-            this.panel15.TabIndex = 208;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.BackColor = System.Drawing.Color.Transparent;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 4.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label13.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label13.Location = new System.Drawing.Point(64, 63);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(0, 12);
-            this.label13.TabIndex = 208;
+            this.label101.AutoSize = true;
+            this.label101.BackColor = System.Drawing.Color.Transparent;
+            this.label101.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label101.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label101.Location = new System.Drawing.Point(63, 38);
+            this.label101.Name = "label101";
+            this.label101.Size = new System.Drawing.Size(62, 17);
+            this.label101.TabIndex = 207;
+            this.label101.Text = "label101";
             // 
             // pictureBox1
             // 
@@ -2150,17 +2174,29 @@ namespace ProjeTakipSistemi
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // label101
+            // label13
             // 
-            this.label101.AutoSize = true;
-            this.label101.BackColor = System.Drawing.Color.Transparent;
-            this.label101.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label101.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label101.Location = new System.Drawing.Point(63, 38);
-            this.label101.Name = "label101";
-            this.label101.Size = new System.Drawing.Size(62, 17);
-            this.label101.TabIndex = 207;
-            this.label101.Text = "label101";
+            this.label13.AutoSize = true;
+            this.label13.BackColor = System.Drawing.Color.Transparent;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 4.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label13.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label13.Location = new System.Drawing.Point(64, 63);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(0, 12);
+            this.label13.TabIndex = 208;
+            // 
+            // panel15
+            // 
+            this.panel15.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panel15.BackgroundImage = global::ProjeTakipSistemi.Properties.Resources._2;
+            this.panel15.Controls.Add(this.label13);
+            this.panel15.Controls.Add(this.pictureBox1);
+            this.panel15.Controls.Add(this.label101);
+            this.panel15.Location = new System.Drawing.Point(1853, 319);
+            this.panel15.Name = "panel15";
+            this.panel15.Size = new System.Drawing.Size(150, 100);
+            this.panel15.TabIndex = 208;
+            this.panel15.Visible = false;
             // 
             // İcerik
             // 
@@ -2232,8 +2268,9 @@ namespace ProjeTakipSistemi
             this.Controls.Add(this.label21);
             this.Controls.Add(this.menuStrip1);
             this.Name = "İcerik";
+            this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form1";
+            this.Text = "Proje İşlemleri";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.uyeProje_FormClosed);
             this.Load += new System.EventHandler(this.uyeProje_Load);
@@ -2267,9 +2304,9 @@ namespace ProjeTakipSistemi
             this.panel4.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel15.ResumeLayout(false);
             this.panel15.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2389,12 +2426,9 @@ namespace ProjeTakipSistemi
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.DateTimePicker dateTimePicker9;
-        private System.Windows.Forms.Panel panel15;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label102;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label13;
         public System.Windows.Forms.Button btnGuncelle;
         public System.Windows.Forms.TextBox isAdiTXT;
         public System.Windows.Forms.ComboBox ihaleTuruCMB;
@@ -2473,12 +2507,15 @@ namespace ProjeTakipSistemi
         public System.Windows.Forms.DateTimePicker dateTimePicker17;
         public System.Windows.Forms.DateTimePicker dateTimePicker15;
         public System.Windows.Forms.DateTimePicker dateTimePicker16;
-        public System.Windows.Forms.Label label101;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem personelİşlemleriToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem notlarToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem programHakkındaToolStripMenuItem;
         public System.Windows.Forms.Label label9;
+        public System.Windows.Forms.Label label101;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Panel panel15;
     }
 }
 

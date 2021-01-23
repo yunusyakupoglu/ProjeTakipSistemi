@@ -81,6 +81,7 @@ namespace ProjeTakipSistemi
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(400, 30);
             this.textBox1.TabIndex = 6;
+            this.textBox1.Visible = false;
             // 
             // dataGridView1
             // 
@@ -149,6 +150,7 @@ namespace ProjeTakipSistemi
             this.kullanicid.Size = new System.Drawing.Size(66, 17);
             this.kullanicid.TabIndex = 213;
             this.kullanicid.Text = "kullanicid";
+            this.kullanicid.Visible = false;
             // 
             // List
             // 
@@ -164,8 +166,8 @@ namespace ProjeTakipSistemi
             this.Controls.Add(this.dataGridView1);
             this.MaximizeBox = false;
             this.Name = "List";
+            this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "uyeList";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.uyeList_FormClosed);
             this.Load += new System.EventHandler(this.uyeList_Load);

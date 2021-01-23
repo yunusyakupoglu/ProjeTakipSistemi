@@ -169,8 +169,8 @@ namespace ProjeTakipSistemi
             this.Controls.Add(this.KullaniciAdiLabel);
             this.Controls.Add(this.panel2);
             this.Name = "GirisPaneli";
+            this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "GirisPaneli";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

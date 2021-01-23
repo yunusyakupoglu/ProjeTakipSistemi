@@ -27,13 +27,11 @@ namespace ProjeTakipSistemi
             {
                 if (dr["kullaniciAdi"].ToString() == GirisPaneli.user && dr["parola"].ToString() == GirisPaneli.pass && dr["yetki"].ToString() == "Admin")
                 {
-                    panel15.BackgroundImage = Properties.Resources._1;
-                    label13.Text = "A D M İ N";
+
                 }
                 else if (dr["kullaniciAdi"].ToString() == GirisPaneli.user && dr["parola"].ToString() == GirisPaneli.pass && dr["yetki"].ToString() == "Üye")
                 {
-                    panel15.BackgroundImage = Properties.Resources._2;
-                    label13.Text = "Ü Y E";
+
                     personelİşlemleriToolStripMenuItem.Enabled = false;
                     personelİşlemleriToolStripMenuItem.Visible = false;
                 }
@@ -44,7 +42,6 @@ namespace ProjeTakipSistemi
         SqlConnection con = new SqlConnection("Data Source=.;Initial Catalog=ProjeTakipSistemi;Integrated Security=true");
         SqlCommand cmd = new SqlCommand();
         SqlDataReader dr;
-        List list = new List();
 
         private void uyeProje_Load(object sender, EventArgs e)
         {
@@ -381,7 +378,9 @@ namespace ProjeTakipSistemi
 
         private void uyeProje_FormClosed(object sender, FormClosedEventArgs e)
         {
-            Application.Exit();
+            List list = new List();
+            list.Show();
+            this.Hide();
         }
 
         private void btnGuncelle_Click(object sender, EventArgs e)

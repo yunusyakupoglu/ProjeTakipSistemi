@@ -61,6 +61,7 @@ namespace ProjeTakipSistemi
             this.label1.Size = new System.Drawing.Size(46, 17);
             this.label1.TabIndex = 2;
             this.label1.Text = "label1";
+            this.label1.Visible = false;
             // 
             // kategoriSil
             // 
@@ -71,7 +72,8 @@ namespace ProjeTakipSistemi
             this.Controls.Add(this.button1);
             this.Controls.Add(this.listBox1);
             this.Name = "kategoriSil";
-            this.Text = "kategoriSil";
+            this.ShowIcon = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.kategoriSil_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

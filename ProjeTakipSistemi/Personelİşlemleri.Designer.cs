@@ -301,8 +301,9 @@ namespace ProjeTakipSistemi
             this.MaximumSize = new System.Drawing.Size(729, 836);
             this.MinimumSize = new System.Drawing.Size(729, 836);
             this.Name = "Personelİşlemleri";
+            this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form3";
+            this.Text = "Personel İşlemleri";
             this.Load += new System.EventHandler(this.Form3_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

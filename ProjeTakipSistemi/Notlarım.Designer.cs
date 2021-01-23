@@ -145,6 +145,7 @@ namespace ProjeTakipSistemi
             this.label4.Size = new System.Drawing.Size(46, 17);
             this.label4.TabIndex = 9;
             this.label4.Text = "label4";
+            this.label4.Visible = false;
             // 
             // Notlarım
             // 
@@ -162,6 +163,8 @@ namespace ProjeTakipSistemi
             this.Controls.Add(this.label1);
             this.Controls.Add(this.comboBox1);
             this.Name = "Notlarım";
+            this.ShowIcon = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Notlarım";
             this.Load += new System.EventHandler(this.Notlarım_Load);
             this.ResumeLayout(false);
