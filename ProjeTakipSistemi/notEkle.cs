@@ -19,8 +19,6 @@ namespace ProjeTakipSistemi
         public notEkle()
         {
             InitializeComponent();
-            label4.Text = GirisPaneli.user;
-
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -35,7 +33,7 @@ namespace ProjeTakipSistemi
             {
                 if (con.State == ConnectionState.Closed)
                     con.Open();
-                SqlCommand command1 = new SqlCommand("select id from tblPersonel where kullaniciAdi = '" + label4.Text + "'", con);
+                SqlCommand command1 = new SqlCommand("select id from tblPersonel where id = '" + label4.Text + "'", con);
                 int proje = (int)command1.ExecuteScalar();
                 // Bağlantımızı kontrol ediyoruz, eğer kapalıysa açıyoruz.
                 string Konular = "insert into notlar(BAŞLIK,KATEGORİ,İÇERİK,personelID) values (@BAŞLIK,@KATEGORİ,@İÇERİK,@personelID)";
